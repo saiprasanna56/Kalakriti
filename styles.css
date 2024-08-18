@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.jpg);
+    color: brown;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: white;
+}
+
+.nav1{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo {
+    font-size: 40px;
+    width: 90vw;
+    padding: 10px;
+    text-align: center;
+    color:chocolate;
+    font-weight:bolder;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+   
+}
+
+nav ul li {
+    display: inline;
+    font-size:large;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    color:crimson;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.banner {
+    position: relative;
+    height: 87vh;
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+      ),
+    url('images/banner.jpg') no-repeat center center/cover;
+    
+
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(62, 60, 60, 0.5);
+    padding: 10px;
+    color:burlywood;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner-text h2{
+    font-size: 70px;
+}
+
+.banner-text p{
+    font-size: 45px;
+}
+
+.featured-artisans, .shop-by-category, .how-it-works, .customer-stories, .artisans-contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.artisans-grid, .categories, .steps, .testimonials {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artisan-card, .category, .step, .testimonial {
+    border: 1px solid #ddd;
+    background-color: rgba(145, 144, 144, 0.5);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.artisan-card img{
+    height: 200px;
+    aspect-ratio: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links, .social-media, .newsletter, .contact-info {
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    margin: 0 5px;
+}
+
+.newsletter input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.category img{
+    height: 200px;
+    aspect-ratio: 1;
+}
+.step img{
+    height: 200px;
+    aspect-ratio: 1;
+}
+.artisans-contact button a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing - Visakhapatnam Crafts Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/background.jpg);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .product-listing {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: calc(33.333% - 100px);
+            box-sizing: border-box;
+            background-color: rgb(122, 122, 122, 0.5);
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .product-card img {
+            height: 200px;
+            aspect-ratio: 1;
+        }
+
+        .price {
+            font-weight: bold;
+            color: green;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links,
+        .social-media,
+        .newsletter,
+        .contact-info {
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media img {
+            width: 24px;
+            margin: 0 5px;
+        }
+
+        .newsletter input {
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        .nav1 {
+            width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            width: 90vw;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="div">
+            <div class="logo">Kala Krithi</div>
+            <nav class="nav1">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="artists.html">Artisans</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="sellerform.html">Become a Seller</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Listing -->
+    <section class="product-listing">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/decor1.jpg" alt="Product 1">
+                <h3>Product Name 1</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹100</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat product-card divs as needed -->
+            <div class="product-card">
+                <img src="images/decor2.jpg" alt="Product 2">
+                <h3>Product Name 2</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹200</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/decor3.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹200</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/decor4.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹300</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/decor5.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹200</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/decor6.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>Short description of the product.</p>
+                <p class="price">₹300</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#shop">Shop</a>
+            <a href="artists.html">Artisans</a>
+            <a href="#footer">Contact</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        <div class="newsletter">
+            <p>Subscribe for Updates</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+        <div class="contact-info">
+            <p>Address: 123 Street, Visakhapatnam, India</p>
+            <p>Email: info@vizagcrafts.com</p>
+            <p>Phone: +91 12345 67890</p>
+        </div>
+    </footer>
+</body>
+
+</html>

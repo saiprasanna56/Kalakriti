@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(8px); 
+            z-index: -1; 
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%; 
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box; 
+        }
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            box-sizing: border-box; 
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group-inline .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group-inline .form-group:last-child {
+            margin-right: 0;
+        }
+        .form-group-checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .form-group-checkbox input {
+            margin-right: 10px;
+        }
+        .form-group-checkbox label {
+            margin: 0;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<div class="content-wrapper">
+    <div class="form-container">
+        <h1>Seller Application Form</h1>
+        <form action="/submit-seller-application" method="post" enctype="multipart/form-data">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Street Address" required>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+                <input type="text" id="zip" name="zip" placeholder="Zip Code" required>
+                <input type="text" id="country" name="country" placeholder="Country" required>
+            </div>
+
+            <!-- Business Information -->
+            <div class="form-group">
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+            </div>
+            <div class="form-group">
+                <label for="businessType">Business Type:</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="individual">Individual</option>
+                    <option value="company">Company</option>
+                    <option value="partnership">Partnership</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="products">Products to Sell:</label>
+                <textarea id="products" name="products" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience in Selling:</label>
+                <textarea id="experience" name="experience" rows="3" required></textarea>
+            </div>
+
+            <!-- Documents Upload -->
+            <div class="form-group">
+                <label for="documents">Upload Business Documents:</label>
+                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx,.jpg,.png" multiple required>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-group">
+                <label for="specialInstructions">Special Instructions:</label>
+                <textarea id="specialInstructions" name="specialInstructions" rows="3"></textarea>
+            </div>
+
+            <!-- Agreement -->
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="confirm" name="confirm" required>
+                <label for="confirm">I confirm that the information provided is accurate and truthful.</label>
+            </div>
+
+            <!-- Submit Form -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
